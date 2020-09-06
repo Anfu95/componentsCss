@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Navbar*/
+header{
+    width: 100%;
+    position: sticky;/*Comprobar segun la version de los navegadores*/
+    top: 0;
+}
+#navbar{
+    height: 5vh;
+    background: rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+}
+#logo{
+    padding-left: 2rem;
+}
+#logo h1{
+    letter-spacing: 5px;
+    color: white;
+}
+.navigation{
+    margin-right: 2rem;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation ul li{
+    display: inline-block;
+}
+.navigation a{
+    display: block;
+    text-decoration: none;
+    border-radius: 0.2rem;
+    padding: 0.2rem 1rem;
+    color: white;
+}
+
+.navigation a:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/*Responsivo*/
+#buttonNavResp{
+    display: none;
+}
+.navigationResp{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(22, 22, 22);
+    height: 100vh;
+    width: 40vw;
+}
+.buttonClose{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4rem;
+    line-height: 4rem;
+    text-decoration: none;
+    padding-right: 1.25rem;
+    text-align: right;
+    vertical-align: middle;
+    width: 7rem;
+}
+
+.visi{
+    visibility: hidden;
+}
+.openMenuResp{
+    visibility: visible;
+    transform: translateX(0);
+    transition: all 600ms ease;
+}
+.closeMenuResp{
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all 600ms ease;
+}
+.navigationResp{
+    padding: 2.5rem 1.75rem;
+}
+.navigationResp ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}  
+.navigationResp ul li{
+    padding:0;
+}
+.navigationResp ul li:first-child a{
+   border-top: 0!important;
+}
+.navigationResp ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(124, 124, 124);
+
+    display: block;
+    line-height: 3.5rem;
+
+    border: 0;
+    border-top: solid 1px rgba(255, 255, 255, 0.125);
+}
+.navigationResp ul li a:hover{
+     color: whitesmoke;
+     
+}
+@media only screen and (max-width: 767px){
+    .navigation{
+        display: none;
+    }
+    #buttonNavResp{
+        display: block;
+    }
+    
+}
